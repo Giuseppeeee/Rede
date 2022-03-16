@@ -114,26 +114,4 @@ public class Rede {
         }
         return ips;
     }
-
-    static String[] corregirFrases(String[] frases, int[] posiciones_puntos) {
-        char[] letras;
-        for (int i = 0; i < frases.length; i++) {
-            int posicion = 0;
-            if (frases[i].charAt(posicion) == ' ') {
-                posicion++;
-            }
-            if (frases[i].charAt(posicion) > 90) {
-                letras = new char[frases[i].length()];
-                for (int j = 0; j < frases[i].length(); j++) {
-                    letras[j] = frases[i].charAt(j);
-                }
-                letras[posicion] -= 32;
-                frases[i] = "";
-                for (int k = 0; k < letras.length; k++) {
-                    frases[i] += letras[k];
-                }
-            }
-        }
-        return frases;
-    }
 }
